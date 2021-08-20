@@ -1,17 +1,32 @@
 import React from "react";
+import ImgSlider from "./ImgSlider";
 import styled from "styled-components";
 
 const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: calc(100vh - 70px);
   padding: 0 calc(3.5vw + 5px);
-  /* background: blue; */
+  position: relative;
+  overflow-x: hidden;
+
+  &:before {
+    background: url("/images/home-background.png") center center / cover
+      no-repeat fixed;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
 `;
 
 const Home = () => {
-  return <Container></Container>;
+  return (
+    <Container>
+      <ImgSlider />
+    </Container>
+  );
 };
 
 export default Home;
