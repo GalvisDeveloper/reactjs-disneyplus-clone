@@ -1,6 +1,8 @@
 import React from "react";
 import ImgSlider from "./ImgSlider";
 import styled from "styled-components";
+import Viewers from "./Viewers";
+import Movies from "./Movies";
 
 const Container = styled.div`
   min-height: calc(100vh - 70px);
@@ -25,6 +27,8 @@ const Home = () => {
   return (
     <Container>
       <ImgSlider />
+      <Viewers />
+      <Movies />
     </Container>
   );
 };
