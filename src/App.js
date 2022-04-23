@@ -6,6 +6,7 @@ import Home from "./components/Home";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Detail from "./components/Detail";
+import Login from "./components/Login";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Router>
         <Header />
         <Switch>
+          <Route exact path="/login" component={() => <Login />} />
           <Route exact path="/" component={() => <Home />} />
           <Route exact path="/detail" component={() => <Detail />} />
           {/* <Route exact path="/detail" component={() => <Detail />}></Route> */}
